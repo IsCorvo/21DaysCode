@@ -1,0 +1,74 @@
+:root {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: linear-gradient(to right top, #2d094f, #32367e, #2e60ac, #238cd6, #22b9fb);;
+
+    font-size: 1.6rem; /* 16px */
+}
+
+.edge-switch {
+    width: 25.6rem;
+    height: 12.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(#ffffff, #ffffff, #ffffff);
+
+    border-radius: 11rem;
+}
+
+.theme-switch {
+    position: relative;
+
+    width: 23.6rem;
+    height: 10.2rem;
+
+    background: linear-gradient(to right top, #080a1a, #12234b, #173982, #1f50bd, #3267fb);
+
+    padding: .5rem .5rem;
+    border-radius: 5rem;
+}
+
+#switch-theme {
+    position: absolute;
+    top: .75rem;
+    left: .75rem;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    transition: transform 700ms;
+}
+
+.container.active #switch-theme {
+    transform: translateX(13.4rem);
+    transition: transform 700ms;
+}
+
+.container.active .theme-switch {
+    transition: transform 700ms;
+    background-image: linear-gradient(to right, #97eebc, #5bd5d1, #53b7d5, #7097c3, #82779d);
+}
+
+.container.active {
+    transition: transform 700ms;
+    background-image: linear-gradient(to left bottom, #f8fffb, #aae4e3, #4ec4ea, #2b9af1, #825fd3);
+}
